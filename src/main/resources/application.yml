@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: my-application
+  # 데이터베이스 설정 (예: H2 데이터베이스)
+  datasource:
+    hikari:
+      jdbc-url: jdbc:h2:mem:testdb;MODE=MYSQL
+      driver-class-name: org.h2.Driver
+      username: sa
+      password:
+
+
+# 웹 서버 포트 설정
+server:
+  port: 8080
+
+# 로깅 설정 (로그 레벨 설정: INFO, 로그 파일 이름 및 경로)
+logging:
+  level:
+    root: INFO
+  file:
+    name: my-application.log
+    path: C:/workspace/springboot/annotation/log
+
+---
+
+# 애플리케이션 프로파일 설정 (예: 개발 환경)
+spring:
+  profiles:
+    active: dev
