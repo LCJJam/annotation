@@ -22,6 +22,10 @@ repositories {
     mavenCentral()
 }
 
+javadoc {
+    options.encoding = "UTF-8"
+}
+
 ext {
     set('snippetsDir', file("build/generated-snippets"))
 }
